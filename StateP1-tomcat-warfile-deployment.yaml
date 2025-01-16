@@ -35,12 +35,6 @@
         path: "/var/lib/tomcat9/webapps/"
         state: directory
 
-    - name: Copy WAR file to Tomcat webapps directory
-      copy:
-        src: /home/aanza/my_web_app/my_web_app.war
-        dest: /var/lib/tomcat9/webapps/my_web_app.war
-        remote_src: no
-
   handlers:
     - name: Restart Tomcat
       service:

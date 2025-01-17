@@ -16,6 +16,8 @@
       apt:
         name: tomcat9
         state: present
+      register: tomcat_install
+      changed_when: tomcat_install is succeeded  # Mark this task as "changed" to trigger a restart if installed
 
     - name: Open port 5757 for Tomcat
       ufw:

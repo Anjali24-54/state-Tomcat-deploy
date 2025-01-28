@@ -13,7 +13,7 @@ pipeline {
                     disableHostKeyChecking: true,  // Disable host key checking for SSH
                     installation: 'myansible',  // The name of your Ansible installation configured in Jenkins
                     inventory: '/home/aanza/.ansible/hosts',  // Path to the inventory file
-                    playbook: 'StateP2-tomcat-warfile-deployment.yaml',  // Path to your playbook
+                    playbook: 'StateP1-tomcat-warfile-deployment.yaml',  // Path to your playbook
                     vaultTmpPath: ''  // You can leave this empty or specify a path if needed
                 )
             }
